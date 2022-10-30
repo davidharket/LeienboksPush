@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="description" content="" />
+        <meta name="author" content="" />
+        <title>Lei En Boks</title>
+        <!-- Favicon-->
+        <link rel="icon" type="image/x-icon" href="static/img/favicon.ico" />
+        <!-- Font Awesome icons (free version)-->
+        <script src="https://use.fontawesome.com/releases/v6.1.0/js/all.js" crossorigin="anonymous"></script>
+        <!-- Google fonts-->
+        <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css" />
+        <link href="https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700" rel="stylesheet" type="text/css" />
+        <!-- Core theme CSS (includes Bootstrap)-->
+        <link href="static/css/styles.css" rel="stylesheet" />
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet">
+        {% import "bootstrap/wtf.html" as wtf %}
+    </head>
+
+    <body id="page-top">
+        <!-- Navigation-->
+        <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
+            <div class="container">
+                <a class="navbar-brand" href="#page-top"><img class="logo"src="static/img/LEI_EN.png"></a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                    Menu
+                    <i class="fas fa-bars ms-1"></i>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarResponsive">
+                    <ul class="navbar-nav text-uppercase ms-auto py-4 py-lg-0">
+                        <li class="nav-item"><a class="nav-link" href="#services">Tjenester</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#bestill">Bestill</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#about">Om Oss</a></li>
+
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <!-- Masthead-->
+        <header class="masthead">
+            <div class="container">
+                {% if not email %}
+                <div class="masthead-subheading">KLAR FOR FEST?</div>
+                <div class="masthead-heading text-uppercase">Lei en Soundboks</div>
+                {% else %}
+                <div class="masthead-heading text-uppercase">BESTILLING GJENNOMFØRT</div>
+                <div class="masthead-subheading">Din bestilling er sendt inn</div>
+                <div class="masthead-subheading">Vi sender deg en e-post når vi har behandlet forespørselen din.</div>
+                {% endif %}
+                <a class="btn btn-primary btn-xl text-uppercase" href="#services">Tell me More</a>
+            </div>
+        </header>
+        <!-- Services-->
+        <section class="page-section" id="services">
+            <div class="container">
+                <div class="text-center">
+                    <h2 class="section-heading text-uppercase">Utleie</h2>
+                    <h3 class="section-subheading text-muted">Lei Soundboks til Lillehammers desidert beste pris!</h3>
+                </div>
+                <div class="row text-center">
+                    <div class="col-md-4">
+                        <span class="fa-stack fa-4x">
+                            <i class="fa-solid fa-coins tag"></i>
+                        </span>
+                        <h4 class="my-3">1 døgn</h4>
+                        <p class="text-muted">299kr</p>
+                    </div>
+                    <div class="col-md-4">
+                        <span class="fa-stack fa-4x">
+                            <i class="fa-solid fa-tag tag"></i>
+                        </span>
+                        <h4 class="my-3">2 døgn</h4>
+                        <p class="text-muted">499kr</p>
+                    </div>
+                    <div class="col-md-4">
+                        <span class="fa-stack fa-4x">
+                            <i class="fa-solid fa-tags tag"></i>
+
+                        </span>
+                        <h4 class="my-3">3 døgn</h4>
+                        <p class="text-muted">649kr</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Bestill-->
+        <section class="page-section" id="bestill">
+            <h1 class="top text-center" style="margin-bottom: 50px"><i><i class="fa-solid fa-arrow-down"></i> FYLL UT HER FOR Å BESTILLE <i class="fa-solid fa-arrow-down"></i></i></h1>
+            <div class="container">
+                <form id="contactForm" action="{{ url_for('home') }}" method="post">
+                                <h2 class="top"><i>E-POST</i></h2>
+                                <div class="form-floating" style="margin-right: 40%">
+                                    <input class="form-control" name="email" type="text" placeholder="Enter your name..." style="margin-top:10px; margin-right: 50%;" data-sb-validations="required" />
+                                    <label for="email">E-postaddresse</label>
+                                    <div class="invalid-feedback" data-sb-feedback="email:required">E-post er påkrevd.</div>
+                                    <div class="invalid-feedback" data-sb-feedback="email:email">E-posten er ikke gyldig.</div>
+                                </div>
+                                <h2 class="top"><i>DAGER</i></h2>
+                                <div class="form-floating" style="margin-right: 40%">
+                                    <input class="form-control" id="days" name="days" type="number" placeholder="e.g. 1" style="margin-top: 10px; margin-right: 50%;" data-sb-validations="required,email" />
+                                    <label for="days">Hvor mange døgn vil du leie?</label>
+                                </div>
+                                <h2 class="top"><i>DATO</i></h2>
+                                <div class="form-floating" style="margin-right: 40%">
+                                    <input class="form-control" id="date" name="date" type="date" placeholder="28.10.2022" style="margin-top: 10px;" data-sb-validations="required" />
+                                    <label for="date"  >Hvilken dato vil du leie fra?</label>
+                                    <div class="invalid-feedback" data-sb-feedback="phone:required">Dato er påkrevd.</div>
+                                </div>
+                                <h2 class="top"><i>ADDRESSE</i></h2>
+                                <div class="form-floating" style="margin-right: 40%">
+                                    <input class="form-control" id="address" name="address" type="text" placeholder="Adresse" style="margin-top: 10px;"data-sb-validations="required" />
+                                    <label for="address">Hvilken addresse skal vi levere til?</label>
+                                    <div class="invalid-feedback" data-sb-feedback="address:required">Addresse er påkrevd.</div>
+                                </div>
+                                <h2 class="top"><i>MELDING</i></h2>
+                                <div class="form-floating">
+                                    <textarea class="form-control" id="message" name="message" placeholder="Legg til en beskjed om det er noe du lurer på..." style="height: 12rem" data-sb-validations="nonrequired"></textarea>
+                                    <label for="message">Legg igjen en beskjed</label></div>
+                                <br />
+                                <!-- Submit success message-->
+                                <!---->
+                                <!-- This is what your users will see when the form-->
+                                <!-- has successfully submitted-->
+                                <div class="d-none" id="submitSuccessMessage">
+                                    <div class="text-center mb-3">
+                                        <div class="fw-bolder">Form submission successful!</div>
+                                        To activate this form, sign up at
+                                        <br />
+                                        <a href="https://startbootstrap.com/solution/contact-forms">https://startbootstrap.com/solution/contact-forms</a>
+                                    </div>
+                                </div>
+                                <!-- Submit error message-->
+                                <!---->
+                                <!-- This is what your users will see when there is-->
+                                <!-- an error submitting the form-->
+                                <div class="d-none" id="submitErrorMessage"><div class="text-center text-danger mb-3">Error sending message!</div></div>
+                                <!-- Submit Button-->
+                                <button class="btn btn-primary text-uppercase" id="submitButton" type="submit">Send</button>
+                            </form>
+            </div>
+
+        </section>
+        <!-- About-->
+        <section class="page-section" id="about">
+            <div class="container">
+                <div class="text-center">
+                    <h2 class="section-heading text-uppercase">OM OSS</h2>
+                    <h3 class="section-subheading text-muted">Vi er et Soundboks-utleieselskap basert i Lillehammer.</h3>
+                </div>
+                <ul class="timeline">
+                    <li>
+                        <div class="timeline-image"><img class="rounded-circle img-fluid" src="static/img/about/1.jpg" alt="..." /></div>
+                        <div class="timeline-panel">
+                            <div class="timeline-heading">
+                                <h4 class="subheading">Vi Leverer Dør-Til-Dør</h4>
+                            </div>
+                            <div class="timeline-body"><p class="text-muted">Vi tilbyr dør-til-dør leveranse i hele Lillehammer!</p></div>
+                        </div>
+                    </li>
+                    <li class="timeline-inverted">
+                        <div class="timeline-image"><img class="rounded-circle img-fluid" src="static/img/about/2.jpg" alt="..." /></div>
+                        <div class="timeline-panel">
+                            <div class="timeline-heading">
+                                <h4 class="subheading">HQ</h4>
+                            </div>
+                            <div class="timeline-body"><p class="text-muted">Våre lokaler og befinner seg i Chr. Dahls gate 21.</p><p class="text-muted"> Om henting av Soundboks er ønsket ovenfor levering kan dette gjøres her!</p></div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="timeline-image"><img class="rounded-circle img-fluid" src="static/img/about/3.jpg" alt="..." /></div>
+                        <div class="timeline-panel">
+                            <div class="timeline-heading">
+                                <h4 class="subheading">Kontakt Oss</h4>
+                            </div>
+                            <div class="timeline-body"><p class="text-muted">Om det er noe du lurer på angående våre tjeneter er det bare å ta kontakt med oss via leienboks@gmail.com. En av våre kundeansvarlige vil komme tilbake til deg så raskt som mulig.</p></div>
+                        </div>
+                    </li>
+                    <li class="timeline-inverted">
+                        <div class="timeline-image">
+                            <h4>
+                                Gjør Festen
+                                <br />
+                                Din
+                                <br />
+                                Bedre!
+                            </h4>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </section>
+        <!-- Footer-->
+        <footer class="footer py-4">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-lg-4 text-lg-start">Copyright &copy; Leienboks 2022</div>
+                    <div class="col-lg-4 my-3 my-lg-0">
+                        <a class="btn btn-social mx-2" href="#!" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                        <a class="btn btn-social mx-2" href="#!" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a class="btn btn-social mx-2" href="#!" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                    <div class="col-lg-4 text-lg-end">
+                        <a class="link-dark text-decoration-none me-3" href="#!">Privacy Policy</a>
+                        <a class="link-dark text-decoration-none" href="#!">Terms of Use</a>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <!-- Bootstrap core JS-->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+        <!-- Core theme JS-->
+        <script src="static/js/scripts.js"></script>
+    </body>
+</html>
