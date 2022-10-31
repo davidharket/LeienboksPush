@@ -1,9 +1,12 @@
 import smtplib
-import config
+import os
+from boto.s3.connection import S3Connection
+
+
 class Message:
     def __init__(self):
         self.my_email = "leienboks@gmail.com"
-        self.my_password = config.APP_PASSWORD
+        self.my_password = str(S3Connection(os.environ["APP_PASSWORD"]))
 
     def send_self(self, email, days, date, address, message):
         print(f"your password is :{self.my_password}")
