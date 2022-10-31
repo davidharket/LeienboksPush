@@ -4,7 +4,7 @@ import os
 class Message:
     def __init__(self):
         self.my_email = "leienboks@gmail.com"
-        self.my_password = os.environ['APP_PASSWORD']
+        self.my_password = os.getenv('APP_PASSWORD')
 
     def send_self(self, email, days, date, address, message):
         print(email, days, date, address, message)
