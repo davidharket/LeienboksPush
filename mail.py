@@ -1,6 +1,8 @@
 import smtplib
+from dotenv import load_dotenv
 import os
 
+load_dotenv()
 class Message:
     def __init__(self):
         self.my_email = "leienboks@gmail.com"
