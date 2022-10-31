@@ -1,6 +1,6 @@
-import smtplib
-from dotenv import load_dotenv
 import os
+from dotenv import load_dotenv
+import smtplib
 
 load_dotenv()
 class Message:
