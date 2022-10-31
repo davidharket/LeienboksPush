@@ -1,10 +1,10 @@
 import smtplib
-from email.mime.text import MIMEText
+import os
 
 class Message:
     def __init__(self):
         self.my_email = "leienboks@gmail.com"
-        self.my_password = "xxpqaggtidzzengj"
+        self.my_password = os.environ['APP_PASSWORD']
 
     def send_self(self, email, days, date, address, message):
         print(email, days, date, address, message)
