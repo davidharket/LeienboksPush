@@ -1,12 +1,11 @@
-import os
-from dotenv import load_dotenv
+import config
 import smtplib
 
 load_dotenv()
 class Message:
     def __init__(self):
         self.my_email = "leienboks@gmail.com"
-        self.my_password = os.getenv('APP_PASSWORD')
+        self.my_password = config.APP_PASSWORD
 
     def send_self(self, email, days, date, address, message):
         print(f"your password is {self.my_password}")
