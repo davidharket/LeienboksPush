@@ -11793,7 +11793,7 @@ section#contact form#contactForm :-ms-input-placeholder {
     padding-bottom: 0px;
 }
 @media (max-width: 1080px) {
-.form-floating {margin-right: 0%;
+.form-floating {margin-right: 10%;
 
 }
 }
