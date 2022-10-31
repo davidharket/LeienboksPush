@@ -93,25 +93,25 @@
             <div class="container">
                 <form id="contactForm" action="{{ url_for('home') }}" method="post">
                                 <h2 class="top"><i>E-POST</i></h2>
-                                <div class="form-floating" style="margin-right: 40%">
+                                <div class="form-floating">
                                     <input class="form-control" name="email" type="text" placeholder="Enter your name..." style="margin-top:10px; margin-right: 50%;" data-sb-validations="required" />
                                     <label for="email">E-postaddresse</label>
                                     <div class="invalid-feedback" data-sb-feedback="email:required">E-post er påkrevd.</div>
                                     <div class="invalid-feedback" data-sb-feedback="email:email">E-posten er ikke gyldig.</div>
                                 </div>
                                 <h2 class="top"><i>DAGER</i></h2>
-                                <div class="form-floating" style="margin-right: 40%">
+                                <div class="form-floating">
                                     <input class="form-control" id="days" name="days" type="number" placeholder="e.g. 1" style="margin-top: 10px; margin-right: 50%;" data-sb-validations="required,email" />
                                     <label for="days">Hvor mange døgn vil du leie?</label>
                                 </div>
                                 <h2 class="top"><i>DATO</i></h2>
-                                <div class="form-floating" style="margin-right: 40%">
+                                <div class="form-floating">
                                     <input class="form-control" id="date" name="date" type="date" placeholder="28.10.2022" style="margin-top: 10px;" data-sb-validations="required" />
                                     <label for="date"  >Hvilken dato vil du leie fra?</label>
                                     <div class="invalid-feedback" data-sb-feedback="phone:required">Dato er påkrevd.</div>
                                 </div>
                                 <h2 class="top"><i>ADDRESSE</i></h2>
-                                <div class="form-floating" style="margin-right: 40%">
+                                <div class="form-floating">
                                     <input class="form-control" id="address" name="address" type="text" placeholder="Adresse" style="margin-top: 10px;"data-sb-validations="required" />
                                     <label for="address">Hvilken addresse skal vi levere til?</label>
                                     <div class="invalid-feedback" data-sb-feedback="address:required">Addresse er påkrevd.</div>

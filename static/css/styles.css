@@ -2661,6 +2661,7 @@ textarea.form-control-lg {
 
 .form-floating {
   position: relative;
+  margin-right: 40%;
 }
 .form-floating > .form-control,
 .form-floating > .form-select {
@@ -11792,6 +11793,7 @@ section#contact form#contactForm :-ms-input-placeholder {
     padding-top: 0px;
     padding-bottom: 0px;
 }
+margin-right: 40%
 @media (max-width: 1080px) {
 .form-floating {margin-right: 10%;
 
