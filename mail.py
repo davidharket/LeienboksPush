@@ -9,9 +9,7 @@ class Message:
         self.my_password = os.getenv('APP_PASSWORD')
 
     def send_self(self, email, days, date, address, message):
-        print(email, days, date, address, message)
-
-        print(email, days, date, address, message)
+        print(self.my_password)
         with smtplib.SMTP("smtp.gmail.com", port=587) as connection:
             connection.starttls()
             connection.login(user=self.my_email, password=self.my_password)
@@ -29,6 +27,7 @@ class Message:
     def send_cus(self, email, days, date, address, message):
         print(email, days, date, address, message)
         print(email, days, date, address, message)
+        print(self.my_password)
         with smtplib.SMTP("smtp.gmail.com", port=587) as connection:
             connection.starttls()
             print(email, days, date, address, message)
