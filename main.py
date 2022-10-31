@@ -41,6 +41,7 @@ def home():
             address = request.form["address"]
             message = request.form["message"]
             mail = Message()
+            print(mail.my_password)
             mail.send_self(email, days, date, address, message)
             mail.send_cus(email, days, date, address, message)
             return render_template("index.html", form=form, email=email, days=days,
