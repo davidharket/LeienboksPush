@@ -11792,6 +11792,11 @@ section#contact form#contactForm :-ms-input-placeholder {
     padding-top: 0px;
     padding-bottom: 0px;
 }
+@media (max.width: 1080px) {
+.form-floating {margin-right: 0%;
+
+}
+}
 .logo{
     margin-bottom: 100px
 }
