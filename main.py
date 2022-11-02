@@ -5,10 +5,10 @@ from wtforms import StringField, SubmitField, DateField, SelectField
 from wtforms.validators import DataRequired, URL, Email
 from mail import Message
 
-
 app = Flask(__name__)
 app.config['SECRET_KEY'] = 'Sodeffjed179'
 Bootstrap(app)
+
 
 class Leieform(FlaskForm):
     email = StringField('Epost', validators=[DataRequired(), Email()])
