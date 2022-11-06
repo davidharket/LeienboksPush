@@ -59,29 +59,28 @@
             <div class="container">
                 <div class="text-center">
                     <h2 class="section-heading text-uppercase">Utleie</h2>
-                    <h3 class="section-subheading text-muted">Lei Soundboks til Lillehammers desidert beste pris!</h3>
+                    <h3 class="section-subheading text-muted">Lei Soundboks til Lillehammers beste pris!</h3>
                 </div>
                 <div class="row text-center">
                     <div class="col-md-4">
                         <span class="fa-stack fa-4x">
                             <i class="fa-solid fa-coins tag"></i>
                         </span>
-                        <h4 class="my-3">1 døgn</h4>
+                        <a class="nav-link" href="#bestill"><h4 class="my-3">1 døgn</h4></a>
                         <p class="text-muted">299kr</p>
                     </div>
                     <div class="col-md-4">
                         <span class="fa-stack fa-4x">
                             <i class="fa-solid fa-tag tag"></i>
                         </span>
-                        <h4 class="my-3">2 døgn</h4>
+                        <a class="nav-link" href="#bestill"><h4 class="my-3">2 døgn</h4></a>
                         <p class="text-muted">499kr</p>
                     </div>
                     <div class="col-md-4">
                         <span class="fa-stack fa-4x">
                             <i class="fa-solid fa-tags tag"></i>
-
                         </span>
-                        <h4 class="my-3">3 døgn</h4>
+                        <a class="nav-link" href="#bestill"><h4 class="my-3">3 døgn</h4></a>
                         <p class="text-muted">649kr</p>
                     </div>
                 </div>
@@ -94,25 +93,30 @@
                 <form id="contactForm" action="{{ url_for('home') }}" method="post">
                                 <h2 class="top"><i>E-POST</i></h2>
                                 <div class="form-floating">
-                                    <input class="form-control" name="email" type="text" placeholder="Enter your name..." style="margin-top:10px; margin-right: 50%;" data-sb-validations="required" />
+                                    <input class="form-control" name="email" type="text" placeholder="Enter your name..." style="margin-top:10px; margin-right: 50%;" data-sb-validations="required" required/>
                                     <label for="email">E-postaddresse</label>
                                     <div class="invalid-feedback" data-sb-feedback="email:required">E-post er påkrevd.</div>
                                     <div class="invalid-feedback" data-sb-feedback="email:email">E-posten er ikke gyldig.</div>
                                 </div>
                                 <h2 class="top"><i>DAGER</i></h2>
                                 <div class="form-floating">
-                                    <input class="form-control" id="days" name="days" type="number" placeholder="e.g. 1" style="margin-top: 10px; margin-right: 50%;" data-sb-validations="required,email" />
+                                    <select  class="form-select" id="days" name="days" aria-label="Default select example" data-sb-validations="required" required>
+                                      <option selected>-</option>
+                                      <option value="1">1</option>
+                                      <option value="2">2</option>
+                                      <option value="3">3</option>
+                                    </select>
                                     <label for="days">Hvor mange døgn vil du leie?</label>
                                 </div>
                                 <h2 class="top"><i>DATO</i></h2>
                                 <div class="form-floating">
-                                    <input class="form-control" id="date" name="date" type="date" placeholder="28.10.2022" style="margin-top: 10px;" data-sb-validations="required" />
+                                    <input class="form-control" id="date" name="date" type="date" placeholder="28.10.2022" style="margin-top: 10px;" data-sb-validations="required" required/>
                                     <label for="date"  >Hvilken dato vil du leie fra?</label>
                                     <div class="invalid-feedback" data-sb-feedback="phone:required">Dato er påkrevd.</div>
                                 </div>
                                 <h2 class="top"><i>ADDRESSE</i></h2>
                                 <div class="form-floating">
-                                    <input class="form-control" id="address" name="address" type="text" placeholder="Adresse" style="margin-top: 10px;"data-sb-validations="required" />
+                                    <input class="form-control" id="address" name="address" type="text" placeholder="Adresse" style="margin-top: 10px;" data-sb-validations="required"/>
                                     <label for="address">Hvilken addresse skal vi levere til?</label>
                                     <div class="invalid-feedback" data-sb-feedback="address:required">Addresse er påkrevd.</div>
                                 </div>
@@ -167,7 +171,7 @@
                             <div class="timeline-heading">
                                 <h4 class="subheading">HQ</h4>
                             </div>
-                            <div class="timeline-body"><p class="text-muted">Våre lokaler og befinner seg i Chr. Dahls gate 21.</p><p class="text-muted"> Om henting av Soundboks er ønsket ovenfor levering kan dette gjøres her!</p></div>
+                            <div class="timeline-body"><p class="text-muted">Våre lokaler befinner seg i Chr. Dahls gate 21.</p><p class="text-muted"> Om henting av Soundboks er ønsket ovenfor levering kan dette gjøres her på forespørsel!</p></div>
                         </div>
                     </li>
                     <li>

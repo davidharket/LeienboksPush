@@ -6,16 +6,17 @@ from wtforms.validators import DataRequired, URL, Email
 from mail import Message
 
 app = Flask(__name__)
-app.config['SECRET_KEY'] = 'Sodeffjed179'
+app.config['SECRET_KEY'] = 'Sodefjed179'
 Bootstrap(app)
 
 
 class Leieform(FlaskForm):
     email = StringField('Epost', validators=[DataRequired(), Email()])
-    days = SelectField('Hvor mange døgn vil du leie?', choices=["-", "1", "2", "3"], validators=[DataRequired()])
+    days = SelectField('Hvor mange døgn vil du leie?', coerce=int,
+                       choices=[("none", "-"), ("one", "1"), ("two", "2"), ("three", "3")], validators=[DataRequired()])
     date = DateField('Hvilken dato vil du leie fra?', format='%d-%m-%Y')
     address = StringField('Hvilken addresse skal vi levere til?', validators=[DataRequired()])
-    submit = SubmitField("Bestill")
+    submit = SubmitField("Bestill", validators=[DataRequired()])
 
 
 @app.route('/', methods=["POST", "GET"])
@@ -41,7 +42,6 @@ def home():
             address = request.form["address"]
             message = request.form["message"]
             mail = Message()
-            print(mail.my_password)
             mail.send_self(email, days, date, address, message)
             mail.send_cus(email, days, date, address, message)
             return render_template("index.html", form=form, email=email, days=days,
