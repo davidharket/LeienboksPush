@@ -25,16 +25,18 @@
         <!-- Navigation-->
         <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
             <div class="container">
-                <a class="navbar-brand" href="#page-top"><img class="logo"src="static/img/LEI_EN.png"></a>
+                <a class="navbar-brand" href="#page-top"><img class="logo" src="static/img/LEI_EN.png"></a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
                     Menu
                     <i class="fas fa-bars ms-1"></i>
                 </button>
                 <div class="collapse navbar-collapse" id="navbarResponsive">
                     <ul class="navbar-nav text-uppercase ms-auto py-4 py-lg-0">
-                        <li class="nav-item"><a class="nav-link" href="#services">Tjenester</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#services">Pris</a></li>
                         <li class="nav-item"><a class="nav-link" href="#bestill">Bestill</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#pris">Tjenester</a></li>
                         <li class="nav-item"><a class="nav-link" href="#about">Om Oss</a></li>
+
 
                     </ul>
                 </div>
@@ -45,7 +47,7 @@
             <div class="container">
                 {% if not email %}
                 <div class="masthead-subheading" style="margin-bottom: 10px;">KLAR FOR</div>
-                <div id="carouselExampleSlidesOnly" class="carousel1 carousel slide" data-bs-ride="carousel" data-bs-interval="3500">
+                <div id="carouselExampleSlidesOnly" class="carousel1 carousel slide" data-bs-ride="carousel" data-bs-interval="2500">
                   <div class="carousel-inner">
                     <div class="carousel-item active">
                         <div class="masthead-subheading">FEST?</div>
@@ -63,10 +65,10 @@
                         <div class="masthead-subheading">MORRO?</div>
                     </div>
                     <div class="carousel-item">
-                        <div class="masthead-subheading">KOS?</div>
+                        <div class="masthead-subheading">DAGS?</div>
                     </div>
                     <div class="carousel-item">
-                        <div class="masthead-subheading">DAGS?</div>
+                        <div class="masthead-subheading">NACH?</div>
                     </div>
                     <div class="carousel-item">
                         <div class="masthead-subheading">AFTERSKI?</div>
@@ -83,7 +85,7 @@
                 <div class="masthead-subheading">Din bestilling er sendt inn</div>
                 <div class="masthead-subheading">Vi sender deg en e-post når vi har behandlet forespørselen din.</div>
                 {% endif %}
-                <a class="btn btn-primary btn-xl text-uppercase" href="#services">Tell me More</a>
+                <a class="btn btn-primary btn-xl text-uppercase" href="#services">Tell Me More</a>
             </div>
         </header>
         <!-- Services-->
@@ -105,15 +107,15 @@
                         <span class="fa-stack fa-4x">
                             <i class="fa-solid fa-tag tag"></i>
                         </span>
-                        <a class="nav-link" href="#bestill"><h4 class="my-3">2 døgn</h4></a>
+                        <a class="nav-link" href="#bestill"><h4 class="my-3">1 helg</h4></a>
                         <p class="text-muted">499kr</p>
                     </div>
                     <div class="col-md-4">
                         <span class="fa-stack fa-4x">
                             <i class="fa-solid fa-tags tag"></i>
                         </span>
-                        <a class="nav-link" href="#bestill"><h4 class="my-3">3 døgn</h4></a>
-                        <p class="text-muted">649kr</p>
+                        <a class="nav-link" href="#bestill"><h4 class="my-3">1 uke</h4></a>
+                        <p class="text-muted">999kr</p>
                     </div>
                 </div>
             </div>
@@ -180,6 +182,20 @@
                             </form>
             </div>
 
+        </section>
+        <!-- Ordering-->
+        <section id="pris" class="page-section" style="padding: 0 0 0 0;">
+            <div class="order">
+                <h1 class="top text-center"><i>SLIK FUNGERER BESTILLINGER</i></h1>
+                <i><h3>STEG 1</h3></i>
+                <p>🔈Du legger inn en bestilling.</p>
+                <i><h3>STEG 2</h3></i>
+                <p>🔈Vi sender deg en e-post om hvilke Soundbokser vi har på lager.</p>
+                <i><h3>STEG 3</h3></i>
+                <p>🔈Denne Soundboks leveres på døren din.</p>
+                <i><h3>SIMSALABIM.</h3></i>
+                <p>🔈Betaling foregår over dørkarmen via Vipps-faktura.</p>
+            </div>
         </section>
         <!-- About-->
         <section class="page-section" id="about">
