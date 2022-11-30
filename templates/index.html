@@ -123,7 +123,7 @@
         <!-- Bestill-->
         <section class="page-section">
             <h3 class="top text-center" style="margin-bottom: 50px; color: grey;"><i>SEND INN EN BESTILLING, SÅ SENDER VI DEG EN E-POST</i></h3>
-            <h1 class="top text-center" style="margin-bottom: 50px"><i><i class="fa-solid fa-arrow-down"></i> FYLL UT HER FOR Å BESTILLE <i class="fa-solid fa-arrow-down"></i></i></h1>
+            <h1 class="top text-center" style="margin-bottom: 50px"><i><i class="fa-solid fa-arrow-down"></i> FYLL UT HER FOR Å BESTILLE <i id="arrows" class="fa-solid fa-arrow-down"></i></i></h1>
             <div class="container">
                 <form id="contactForm" action="{{ url_for('home') }}" method="post">
                                 <h2 class="top" id="bestill"><i>E-POST</i></h2>
@@ -185,23 +185,23 @@
         </section>
         <!-- Ordering-->
         <section id="pris" class="page-section" style="padding: 0 0 0 0;">
-            <div class="order">
-                <h1 class="top text-center"><i>SLIK FUNGERER BESTILLINGER</i></h1>
-                <i><h3>STEG 1</h3></i>
-                <p>🔈Du legger inn en bestilling.</p>
-                <i><h3>STEG 2</h3></i>
-                <p>🔈Vi sender deg en e-post om hvilke Soundbokser vi har på lager.</p>
-                <i><h3>STEG 3</h3></i>
-                <p>🔈Denne Soundboks leveres på døren din.</p>
-                <i><h3>SIMSALABIM.</h3></i>
-                <p>🔈Betaling foregår over dørkarmen via Vipps-faktura.</p>
+            <div class="section">
+                <h1 class="top text-center" style="margin: 50px 0 30px 0;"><i>SLIK FUNGERER BESTILLINGER</i></h1>
+                <h3>STEG 1</h3>
+                <p style="margin-bottom: 5px"><i class="fa-regular fa-circle-play tag"></i> Du legger inn en bestilling.</p>
+                <h3>STEG 2</h3>
+                <p style="margin-bottom: 5px"><i class="fa-regular fa-circle-play tag"></i> Vi sender deg en e-post om hvilke Soundbokser</p><p>vi har på lager.</p>
+               <h3>STEG 3</h3>
+                <p style="margin-bottom: 0px"><i class="fa-regular fa-circle-play tag"></i> Denne Soundboks leveres på</p><p>døren din.</p>
+               <h3>SIMSALABIM.</h3>
+                <p style="margin-bottom: 0px"><i class="fa-regular fa-circle-play tag"></i> Betaling foregår over dørkarmen</p><p>via Vipps-faktura.</p>
             </div>
         </section>
         <!-- About-->
         <section class="page-section" id="about">
-            <div class="container">
+            <div class="container" style="padding-top: 250px">
                 <div class="text-center">
-                    <h2 class="section-heading text-uppercase">OM OSS</h2>
+                    <h1 class="section-heading text-uppercase">OM OSS</h1>
                     <h3 class="section-subheading text-muted">Vi er et Soundboks-utleieselskap basert i Lillehammer.</h3>
                 </div>
                 <ul class="timeline">
@@ -255,10 +255,6 @@
                         <a class="btn btn-social mx-2" href="#!" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
                         <a class="btn btn-social mx-2" href="#!" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
                         <a class="btn btn-social mx-2" href="#!" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
-                    </div>
-                    <div class="col-lg-4 text-lg-end">
-                        <a class="link-dark text-decoration-none me-3" href="#!">Privacy Policy</a>
-                        <a class="link-dark text-decoration-none" href="#!">Terms of Use</a>
                     </div>
                 </div>
             </div>

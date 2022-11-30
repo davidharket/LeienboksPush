@@ -11799,6 +11799,9 @@ section#contact form#contactForm :-ms-input-placeholder {
 .form-floating{
     margin-right: 0%;
 }
+.sb-img-remove{
+    display: none;
+}
 }
 .logo{
     margin-bottom: 100px
@@ -11809,9 +11812,20 @@ section#contact form#contactForm :-ms-input-placeholder {
     height: 60px;
 }
 }
-.order {
+.section {
      background: linear-gradient(#ededed, #ededed, white);
      padding: 50px 0 50px 0;
      text-align:center;
      height: 600px
+}
+.sb-img{
+    width: 10em;
+}
+.sb-img-remove{
+    width: 10em;
+}
+@media (max-width: 544px) {
+#arrows{
+    display: none;
+}
 }
