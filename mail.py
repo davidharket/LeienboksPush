@@ -16,7 +16,7 @@ class Message:
                 to_addrs=self.my_email,
                 msg=f"Subject: Melding Fra:\n\n"
                     f" E-post: {email}\n\n"
-                    f" Antall dager: {days}\n"
+                    f" Leielengde: {days}\n"
                     f" Fra denne datoen: {date}\n"
                     f" Til denne addressen: {address}\n"
                     f" Ekstra beskjed: {message}".encode("utf-8")

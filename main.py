@@ -12,8 +12,8 @@ Bootstrap(app)
 
 class Leieform(FlaskForm):
     email = StringField('Epost', validators=[DataRequired(), Email()])
-    days = SelectField('Hvor mange døgn vil du leie?', coerce=int,
-                       choices=[("none", "-"), ("one", "1"), ("two", "2"), ("three", "3")], validators=[DataRequired()])
+    days = SelectField('Hvor lenge vil du leie?', coerce=int,
+                       choices=[("none", "-"), ("day", "1 døgn"), ("weekend", "1 helg"), ("week", "1 uke"), ("specified", "Egendefinert")], validators=[DataRequired()])
     date = DateField('Hvilken dato vil du leie fra?', format='%d-%m-%Y')
     address = StringField('Hvilken addresse skal vi levere til?', validators=[DataRequired()])
     submit = SubmitField("Bestill", validators=[DataRequired()])
