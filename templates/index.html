@@ -18,6 +18,10 @@
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet">
+        <link href="https://fonts.cdnfonts.com/css/gotham" rel="stylesheet">
+        <style>
+        @import url('https://fonts.cdnfonts.com/css/gotham');
+        </style>
         {% import "bootstrap/wtf.html" as wtf %}
     </head>
 
@@ -93,7 +97,7 @@
             <div class="container">
                 <div class="text-center">
                     <h2 class="section-heading text-uppercase">Utleie</h2>
-                    <h3 class="section-subheading text-muted">Lei Soundboks til Lillehammers beste pris!</h3>
+                    <p class="section-subheading text-muted">Lei Soundboks til Lillehammers beste pris!</p>
                 </div>
                 <div class="row text-center">
                     <div class="col-md-4">
@@ -129,7 +133,7 @@
                                 <h2 class="top" id="bestill"><i>E-POST</i></h2>
                                 <div class="form-floating">
                                     <input class="form-control" name="email" type="text" placeholder="Enter your name..." style="margin-top:10px; margin-right: 50%;" data-sb-validations="required" required/>
-                                    <label for="email">E-postaddresse</label>
+                                    <label for="email">E-POSTADRESSE</label>
                                     <div class="invalid-feedback" data-sb-feedback="email:required">E-post er påkrevd.</div>
                                     <div class="invalid-feedback" data-sb-feedback="email:email">E-posten er ikke gyldig.</div>
                                 </div>
@@ -137,29 +141,29 @@
                                 <div class="form-floating">
                                     <select  class="form-select" id="days" name="days" aria-label="Default select example" data-sb-validations="required" required>
                                       <option selected>-</option>
-                                      <option value="1 døgn">1 Døgn</option>
-                                      <option value="1 helg">1 Helg</option>
-                                      <option value="1 uke">1 Uke</option>
-                                      <option value="egendefinert">Egendefinert</option>
+                                      <option value="1 døgn">1 DØGN</option>
+                                      <option value="1 helg">1 HELG</option>
+                                      <option value="1 uke">1 UKE</option>
+                                      <option value="egendefinert">EGENDEFINERT</option>
                                     </select>
-                                    <label for="days">Hvor lenge vil du leie?</label>
+                                    <label for="days">HVOR LENGE VIL DU LEIE?</label>
                                 </div>
                                 <h2 class="top"><i>DATO</i></h2>
                                 <div class="form-floating">
                                     <input class="form-control" id="date" name="date" type="date" placeholder="28.10.2022" style="margin-top: 10px;" data-sb-validations="required" required/>
-                                    <label for="date">Hvilken dato vil du leie fra?</label>
+                                    <label for="date">HVILKEN DATO VIL DU LEIE FRA?</label>
                                     <div class="invalid-feedback" data-sb-feedback="phone:required">Dato er påkrevd.</div>
                                 </div>
                                 <h2 class="top"><i>ADRESSE</i></h2>
                                 <div class="form-floating">
                                     <input class="form-control" id="address" name="address" type="text" placeholder="Adresse" style="margin-top: 10px;" data-sb-validations="required"/>
-                                    <label for="address">Hvilken adresse skal vi levere til?</label>
+                                    <label for="address">HVILKEN ADDRESSE SKAL VI LEVERE TIL?</label>
                                     <div class="invalid-feedback" data-sb-feedback="address:required">Adresse er påkrevd.</div>
                                 </div>
                                 <h2 class="top"><i>MELDING</i></h2>
                                 <div class="form-floating" style="margin-right: 0%;">
                                     <textarea class="form-control" id="message" name="message" placeholder="Legg til en beskjed om det er noe du lurer på..." style="height: 12rem" data-sb-validations="nonrequired"></textarea>
-                                    <label for="message">Legg igjen en beskjed</label></div>
+                                    <label for="message">LEGG IGJEN EN BESKJED</label></div>
                                 <br />
                                 <!-- Submit success message-->
                                 <!---->
@@ -182,32 +186,72 @@
                                 <button class="btn btn-primary text-uppercase" id="submitButton" type="submit">Send</button>
                             </form>
             </div>
-
         </section>
         <!-- Ordering-->
+
         <section id="pris" class="page-section" style="padding: 0 0 0 0;">
-            <div class="section">
-                <h1 class="top text-center" style="margin: 50px 0 30px 0; color: black;"><i>SLIK FUNGERER BESTILLINGER</i></h1>
-                <h3>STEG 1</h3>
-                <h6 style="margin-bottom: 5px"><i class="fa-regular fa-circle-play tag"></i> Du legger inn en bestilling.</h6>
-                <h3>STEG 2</h3>
-                <h6 style="margin-bottom: 5px"><i class="fa-regular fa-circle-play tag"></i> Vi sender deg en e-post om hvilke Soundbokser</h6><h6 style="margin-top: 5px;">vi har på lager.</h6>
-               <h3>STEG 3</h3>
-                <h6 style="margin-bottom: 0px"><i class="fa-regular fa-circle-play tag"></i> Denne Soundboks leveres på</h6><h6 style="margin-top: 5px;">døren din.</h6>
-               <h3>SIMSALABIM.</h3>
-                <h6 style="margin-bottom: 0px"><i class="fa-regular fa-circle-play tag"></i> Betaling foregår over dørkarmen</h6><h6 style="margin-top: 5px;">via Vipps-faktura.</h6>
+            <div class="container">
+                <div class="text-center">
+                    <h1 class="top text-center" style="margin: 100px 0 50px 0; color: black;"><i>SLIK FUNGERER BESTILLINGER</i></h1>
+                </div>
+                <div class="row text-center">
+                    <div class="col-md-3">
+                        <ul class="timeline">
+                        <li>
+                            <div class="timeline-image"><img class="rounded-circle img-fluid" src="static/img/about/1.jpg" alt="..." /></div>
+                        </li>
+                        </ul>
+                        <div>
+                        <h3>STEG 1</h3>
+                        <p style="margin-bottom: 5px">Du legger inn en bestilling</p>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <ul class="timeline">
+                        <li>
+                            <div class="timeline-image"><img class="rounded-circle img-fluid" src="static/img/about/2.jpg" alt="..." /></div>
+                        </li>
+                        </ul>
+                        <div>
+                        <h3>STEG 2</h3>
+                        <p style="margin-bottom: 5px">Vi sender deg en melding om hvilke soundbokser vi har på lager</p>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <ul class="timeline">
+                        <li>
+                            <div class="timeline-image"><img class="rounded-circle img-fluid" src="static/img/about/3.jpg" alt="..." /></div>
+                        </li>
+                        </ul>
+                        <div>
+                        <h3>STEG 3</h3>
+                        <p style="margin-bottom: 0px">Soundboksen leveres på døren din.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <ul class="timeline">
+                        <li>
+                            <div class="timeline-image"><img class="rounded-circle img-fluid" src="static/img/about/4.jpg" alt="..." /></div>
+                        </li>
+                        </ul>
+                        <div>
+                        <h3>SIMSALABIM.</h3>
+                        <p style="margin-bottom: 0px">Betaling foregår over vipps-faktura</p>
+                        </div>
+                    </div>
+                </div>
             </div>
         </section>
         <!-- About-->
-        <section class="page-section" id="about">
-            <div class="container" style="padding-top: 250px">
+        <section class="page-section" style="padding-top: 300px">
+            <div class="container">
                 <div class="text-center">
-                    <h1 class="section-heading text-uppercase">OM OSS</h1>
-                    <h3 class="section-subheading text-muted">Vi er et Soundboks-utleieselskap basert i Lillehammer.</h3>
+                    <h1 id="about" class="section-heading text-uppercase">OM OSS</h1>
+                    <p class="section-subheading text-muted" style="margin-bottom: 60px">Vi er et Soundboks-utleieselskap basert i Lillehammer.</p>
                 </div>
                 <ul class="timeline">
                     <li>
-                        <div class="timeline-image"><img class="rounded-circle img-fluid" src="static/img/about/1.jpg" alt="..." /></div>
+                        <div class="timeline-image"><img class="rounded-circle img-fluid" src="static/img/about/a.jpg" alt="..." /></div>
                         <div class="timeline-panel">
                             <div class="timeline-heading">
                                 <h4 class="subheading">Vi Leverer Dør-Til-Dør</h4>
@@ -216,7 +260,7 @@
                         </div>
                     </li>
                     <li class="timeline-inverted">
-                        <div class="timeline-image"><img class="rounded-circle img-fluid" src="static/img/about/2.jpg" alt="..." /></div>
+                        <div class="timeline-image"><img class="rounded-circle img-fluid" src="static/img/about/b.jpg" alt="..." /></div>
                         <div class="timeline-panel">
                             <div class="timeline-heading">
                                 <h4 class="subheading">HQ</h4>
@@ -225,7 +269,7 @@
                         </div>
                     </li>
                     <li>
-                        <div class="timeline-image"><img class="rounded-circle img-fluid" src="static/img/about/3.jpg" alt="..." /></div>
+                        <div class="timeline-image"><img class="rounded-circle img-fluid" src="static/img/about/c.jpg" alt="..." /></div>
                         <div class="timeline-panel">
                             <div class="timeline-heading">
                                 <h4 class="subheading">Kontakt Oss</h4>
