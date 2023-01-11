@@ -11836,4 +11836,7 @@ section#contact form#contactForm :-ms-input-placeholder {
 #arrows{
     display: none;
 }
+header.masthead{
+    padding-bottom: 15rem;
+}
 }
